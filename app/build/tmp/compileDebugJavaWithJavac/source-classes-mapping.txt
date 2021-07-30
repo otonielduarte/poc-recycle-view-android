@@ -1,6 +1,0 @@
-com/otoniel/androidrecycleview/BuildConfig.java
- com.otoniel.androidrecycleview.BuildConfig
-com/otoniel/androidrecycleview/databinding/ActivityMainBinding.java
- com.otoniel.androidrecycleview.databinding.ActivityMainBinding
-com/otoniel/androidrecycleview/databinding/TicketItemBinding.java
- com.otoniel.androidrecycleview.databinding.TicketItemBinding
