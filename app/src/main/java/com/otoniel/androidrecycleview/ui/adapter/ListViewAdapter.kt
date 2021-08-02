@@ -9,7 +9,7 @@ import android.widget.TextView
 import com.otoniel.androidrecycleview.R
 import com.otoniel.androidrecycleview.model.Ticket
 
-class TicketsAdapter(private val context: Context, private val all: ArrayList<Ticket>) : BaseAdapter() {
+class ListViewAdapter(private val context: Context, private val all: ArrayList<Ticket>) : BaseAdapter() {
 
     override fun getCount(): Int {
         return all.size

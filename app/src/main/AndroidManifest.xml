@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidRecycleView">
-        <activity android:name=".ui.activity.MainActivity">
+        <activity
+            android:name=".ui.activity.NewTicketActivity"
+            android:exported="true" />
+        <activity android:name=".ui.activity.TicketListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

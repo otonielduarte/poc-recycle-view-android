@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Notepad</string>
     <string name="bottom_text_main_activity">Insert a new note</string>
+    <string name="form_title">Title</string>
+    <string name="form_description">Description</string>
+    <string name="button_save">save ticket</string>
 </resources>

@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="@android:color/darker_gray"
-    tools:context=".ui.activity.MainActivity">
+    tools:context=".ui.activity.TicketListActivity">
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:id="@+id/listView"
+        android:id="@+id/recyclerView"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:spanCount="2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -35,7 +37,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/listView"
+        app:layout_constraintTop_toBottomOf="@id/recyclerView"
         android:textSize="20sp"
         android:textColor="@android:color/darker_gray"
         android:padding="10dp"
