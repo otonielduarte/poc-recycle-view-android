@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidRecycleView">
         <activity
-            android:name=".ui.activity.NewTicketActivity"
+            android:name=".ui.activity.TicketFormActivity"
             android:exported="true" />
         <activity android:name=".ui.activity.TicketListActivity">
             <intent-filter>
