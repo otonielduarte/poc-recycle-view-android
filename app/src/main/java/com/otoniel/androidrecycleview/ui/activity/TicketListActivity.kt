@@ -56,9 +56,9 @@ class TicketListActivity : AppCompatActivity(), OnItemClickListener {
     }
 
     private fun handleResultDataFromTicketActivity(result: ActivityResult) {
-        val intent = result.data
-        val resultCode = result.resultCode
-        if (intent != null && hasTicket(intent)) {
+        val intent = result.data ?: return
+        if (intent.hasExtra(KEY_INTENT_TICKET)) {
+            val resultCode = result.resultCode
             if (resultCode == Activity.RESULT_OK) {
                 val ticket: Ticket = getSerializableTicket(intent)
                 if (isEditMode(intent)) {
@@ -76,13 +76,10 @@ class TicketListActivity : AppCompatActivity(), OnItemClickListener {
     private fun isEditMode(intent: Intent) = intent.getBooleanExtra(EDIT_MODE, false)
 
     private fun getIntPosition(intent: Intent): Int =
-        intent?.getIntExtra(KEY_TICKET_POSITION, -1)
+        intent.getIntExtra(KEY_TICKET_POSITION, -1)
 
     private fun getSerializableTicket(intent: Intent): Ticket =
-        intent?.getSerializableExtra(KEY_INTENT_TICKET) as Ticket
-
-    private fun hasTicket(intent: Intent) =
-        intent?.hasExtra(KEY_INTENT_TICKET) == true
+        intent.getSerializableExtra(KEY_INTENT_TICKET) as Ticket
 
     private fun handleRecyclerView() {
         recyclerView.adapter = ticketsAdapter
