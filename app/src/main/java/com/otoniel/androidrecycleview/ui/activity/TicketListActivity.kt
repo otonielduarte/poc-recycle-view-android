@@ -27,7 +27,7 @@ class TicketListActivity : AppCompatActivity(), OnItemClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setTitle(R.string.app_name)
+        setTitle(R.string.list_tickets_appbar)
 
         initAcitivityLauncher()
         createAdapter()

@@ -17,6 +17,7 @@ class TicketFormActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTitle(R.string.form_appbar_title)
         setContentView(R.layout.activity_new_ticket)
 
         if (isEditMode()) {

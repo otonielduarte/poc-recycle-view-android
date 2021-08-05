@@ -37,22 +37,24 @@ class TicketsAdapter(
 
     fun addTicket(ticket: Ticket) {
         ticketList.add(ticket)
-        notifyDataSetChanged()
+        notifyItemInserted(ticketList.size)
+       // notifyDataSetChanged()
     }
 
     fun editTicket(ticket: Ticket, position: Int){
         ticketList[position] = ticket
-        notifyDataSetChanged()
+        //notifyDataSetChanged()
+        notifyItemChanged(position)
     }
 
     fun removeTicket(position: Int) {
         ticketList.removeAt(position)
-        notifyDataSetChanged()
+        notifyItemRemoved(position)
     }
 
     fun changeTicketsOrder(initPos: Int, endPos: Int) {
         Collections.swap(ticketList, initPos, endPos)
-        notifyDataSetChanged()
+        notifyItemMoved(initPos, endPos)
     }
 
     class TicketViewHolder(private val ticketView: View) : RecyclerView.ViewHolder(ticketView) {
